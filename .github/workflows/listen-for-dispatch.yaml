@@ -2,7 +2,7 @@ name: Run on Repo2 PR Merge
 
 on:
   repository_dispatch:
-    types: [pr-merged]
+    types: [sdk-pr-merged]
 
 jobs:
   run-on-dispatch:
