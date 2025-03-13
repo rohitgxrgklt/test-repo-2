@@ -1,0 +1,14 @@
+name: Run on Repo2 PR Merge
+
+on:
+  repository_dispatch:
+    types: [pr-merged]
+
+jobs:
+  run-on-dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo1
+        uses: actions/checkout@v2
+      - name: Run your desired commands
+        run: echo "Triggered by a merged PR in repo2!"
